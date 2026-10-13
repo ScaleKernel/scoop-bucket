@@ -1,0 +1,28 @@
+{
+  "version": "0.1.0",
+  "description": "Log in to a product from your own computer for a ScaleKernel audit",
+  "homepage": "https://github.com/ScaleKernel/connect",
+  "license": "Apache-2.0",
+  "notes": "Run the command an audit shows you: scalekernel-connect <login link>",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ScaleKernel/connect/releases/download/v0.1.0/scalekernel-connect-0.1.0-windows-x64.zip",
+      "hash": "3463c88353418d1b0784d9a913bdb670a15a957c8ffb047f1a19a344ad5562e9"
+    }
+  },
+  "extract_dir": "scalekernel-connect",
+  "bin": "scalekernel-connect.exe",
+  "checkver": {
+    "github": "https://github.com/ScaleKernel/connect"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ScaleKernel/connect/releases/download/v$version/scalekernel-connect-$version-windows-x64.zip",
+        "hash": {
+          "url": "$url.sha256"
+        }
+      }
+    }
+  }
+}
